@@ -5,7 +5,7 @@
     <classes>
       <class name="test_Script.AdminUsers_Test">
         <methods>
-          <include name="verifyUserisAbleToSearchAdminUserswithValidUsernameandValidUserType"/>
+          <include name="verifyUserisAbletoSearchNewUserinAdminUsers"/>
           <include name="initializeBrowser"/>
           <include name="closeandquit"/>
         </methods>

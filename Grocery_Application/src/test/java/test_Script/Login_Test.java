@@ -22,14 +22,8 @@ public class Login_Test extends Base_Class {
 		loginpage.enterUsernameonUserField(username);
 		loginpage.enterPasswordonPasswordField(password);
 		loginpage.clickSigninButton();
-		//WebElement usernamefield=driver.findElement(By.name("username"));
-		//usernamefield.sendKeys("admin");
-		//WebElement passwordfield=driver.findElement(By.name("password"));
-		//passwordfield.sendKeys("admin");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		//WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		//signin.click();
+		
+		
 	}
 	@Test
 	public void verifyInvalidUsernamewithValidPassword() throws IOException
@@ -40,14 +34,7 @@ public class Login_Test extends Base_Class {
 		loginpage.enterUsernameonUserField(username);
 		loginpage.enterPasswordonPasswordField(password);
 		loginpage.clickSigninButton();
-		//WebElement usernamefield=driver.findElement(By.xpath("//input[@name='username']"));
-		//usernamefield.sendKeys("adm1223");
-		//WebElement passwordfield=driver.findElement(By.xpath("//input[@name='password']"));
-		//passwordfield.sendKeys("admin");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		//WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		//signin.click();
+		
 	}
 	@Test
 	public void verifyvalidUsernamewithInValidPassword() throws IOException
@@ -58,14 +45,7 @@ public class Login_Test extends Base_Class {
 		loginpage.enterUsernameonUserField(username);
 		loginpage.enterPasswordonPasswordField(password);
 		loginpage.clickSigninButton();
-		//WebElement usernamefield=driver.findElement(By.xpath("//input[@name='username']"));
-		//usernamefield.sendKeys("admin");
-		//WebElement passwordfield=driver.findElement(By.xpath("//input[@name='password']"));
-		//passwordfield.sendKeys("admin1334");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		//WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		//signin.click();
+		
 }
 	@Test
 	public void verifyInvalidUsernamewithInValidPassword() throws IOException
@@ -76,13 +56,6 @@ public class Login_Test extends Base_Class {
 		loginpage.enterUsernameonUserField(username);
 		loginpage.enterPasswordonPasswordField(password);
 		loginpage.clickSigninButton();
-		//WebElement usernamefield=driver.findElement(By.xpath("//input[@name='username']"));
-		//usernamefield.sendKeys("adm1223");
-		//WebElement passwordfield=driver.findElement(By.xpath("//input[@name='password']"));
-		//passwordfield.sendKeys("admin133334");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		//WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		//signin.click();
+		
 }
 }

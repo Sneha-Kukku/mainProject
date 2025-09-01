@@ -1,57 +1,58 @@
 package test_Script;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import automation_Core.Base_Class;
 import pages.AdminUsers_Page;
+import pages.Login_Page;
+import utilities.Excel_Utility;
 
 public class AdminUsers_Test extends Base_Class {
 	@Test
-	public void verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage()
+	public void verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage() throws IOException
 	{
+		String username=Excel_Utility.getStringData(1, 0,"LoginPage");
+		String password=Excel_Utility.getStringData(1, 1,"LoginPage");
+		
+		Login_Page loginpage=new Login_Page(driver);
+		loginpage.enterUsernameonUserField(username);
+		loginpage.enterPasswordonPasswordField(password);
+		loginpage.clickSigninButton();
+		
 		AdminUsers_Page adminusersPage=new AdminUsers_Page(driver);
-		adminusersPage.verifyValidUsername();
-		adminusersPage.verifyValidPassword();
-		adminusersPage.clickSignin();
-		adminusersPage.verifyAdminUsersButton();
-		/*WebElement usernamefield=driver.findElement(By.name("username"));
-		usernamefield.sendKeys("admin");
-		WebElement passwordfield=driver.findElement(By.name("password"));
-		passwordfield.sendKeys("admin");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
-		WebElement moreInfoButton=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
-		moreInfoButton.click();*/
-	}
+		adminusersPage.clickAdminUsersButton();
+		adminusersPage.clickNewButton();
+		adminusersPage.enterUsernameField();
+		adminusersPage.enterPasswordfield();
+		adminusersPage.enterUsertypefield();
+		adminusersPage.selectAdminfromUserType();
+		adminusersPage.clickSaveButton();
+		}
 	@Test
-	public void verifyUserIsAbleToClickSearchButtoninsideAdminUserstab()
+	public void verifyUserisAbletoSearchNewUserinAdminUsers() throws IOException
 	{
+		String username=Excel_Utility.getStringData(1, 0,"LoginPage");
+		String password=Excel_Utility.getStringData(1, 1,"LoginPage");
+		
+		Login_Page loginpage=new Login_Page(driver);
+		loginpage.enterUsernameonUserField(username);
+		loginpage.enterPasswordonPasswordField(password);
+		loginpage.clickSigninButton();
+		
 		AdminUsers_Page adminusersPage=new AdminUsers_Page(driver);
-		adminusersPage.verifyValidUsername();
-		adminusersPage.verifyValidPassword();
-		adminusersPage.clickSignin();
-		adminusersPage.verifyAdminUsersButton();
-		adminusersPage.verifyUserisAbletoClickOnSearchiconinAdminUsers();
+		adminusersPage.clickAdminUsersButton();
+		adminusersPage.clickSearchButton();
+		adminusersPage.enterUsernamefieldDisplayedintheSearchpage();
+		adminusersPage.enterUsertypeinSearchPage();
+		adminusersPage.clickSearchButtondisplayedintheSearchPage();
+		adminusersPage.clickSearchButton();
 		
 		
-		/*WebElement usernamefield=driver.findElement(By.name("username"));
-		usernamefield.sendKeys("admin");
-		WebElement passwordfield=driver.findElement(By.name("password"));
-		passwordfield.sendKeys("admin");
-		//WebElement checkBox=driver.findElement(By.id("remember"));
-		//checkBox.click();
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
-		WebElement moreInfoButton=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']"));
-		moreInfoButton.click();
-		
-		WebElement searchButton=driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-primary']"));
-		searchButton.click();*/
-			}
+	}
 	
 	}
 

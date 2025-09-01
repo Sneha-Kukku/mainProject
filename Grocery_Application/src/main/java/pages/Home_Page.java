@@ -13,31 +13,17 @@ public class Home_Page {
 		PageFactory.initElements(driver,this);
 		
 	}
-	@FindBy(name="username") private WebElement usernamefield;
-	@FindBy(name="password") private WebElement passwordfield;
-	@FindBy(xpath="//button[@type='submit']") private WebElement siginin;
 	
 	@FindBy(xpath="//a[@data-toggle='dropdown']") private WebElement adminButton;
 	@FindBy(xpath="//a[@class='dropdown-item' and @href='https://groceryapp.uniqassosiates.com/admin/logout']") private WebElement logoutButton;
 	
 	
-	public void verifyValidUsername()
-	{
-		usernamefield.sendKeys("admin");
-	}
-	public void verifyValidPassword()
-	{
-		passwordfield.sendKeys("admin");
-	}
-	public void clickSignin()
-	{
-		siginin.click();
-	}
-	public void verifyAdminButton()
+	
+	public void clickAdminButton()
 	{
 		adminButton.click();
 	}
-	public void verifyLogoutButton()
+	public void clickLogoutButton()
 	{
 		logoutButton.click();
 	}
