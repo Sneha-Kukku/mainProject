@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-01T18:24:21 IST" name="Default suite" finished-at="2025-09-01T18:24:45 IST" duration-ms="23761">
+  <suite started-at="2025-09-01T20:02:04 IST" name="Default suite" finished-at="2025-09-01T20:02:36 IST" duration-ms="32061">
     <groups>
     </groups>
-    <test started-at="2025-09-01T18:24:21 IST" name="Default test" finished-at="2025-09-01T18:24:45 IST" duration-ms="23761">
+    <test started-at="2025-09-01T20:02:04 IST" name="Default test" finished-at="2025-09-01T20:02:36 IST" duration-ms="32061">
       <class name="test_Script.AdminUsers_Test">
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:21 IST" name="initializeBrowser" finished-at="2025-09-01T18:24:29 IST" duration-ms="7890" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:04 IST" name="initializeBrowser" finished-at="2025-09-01T20:02:15 IST" duration-ms="10603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:29 IST" name="verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage" finished-at="2025-09-01T18:24:36 IST" duration-ms="6887" status="PASS">
+        <test-method signature="verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:15 IST" name="verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage" finished-at="2025-09-01T20:02:23 IST" duration-ms="8358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage -->
-        <test-method is-config="true" signature="closeandquit()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:36 IST" name="closeandquit" finished-at="2025-09-01T18:24:36 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="closeandquit()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:23 IST" name="closeandquit" finished-at="2025-09-01T20:02:23 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeandquit -->
-        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:36 IST" name="initializeBrowser" finished-at="2025-09-01T18:24:41 IST" duration-ms="4863" status="PASS">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:23 IST" name="initializeBrowser" finished-at="2025-09-01T20:02:31 IST" duration-ms="7168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyUserisAbletoSearchNewUserinAdminUsers()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:41 IST" name="verifyUserisAbletoSearchNewUserinAdminUsers" finished-at="2025-09-01T18:24:45 IST" duration-ms="3970" status="PASS">
+        <test-method signature="verifyUserisAbletoSearchNewUserinAdminUsers()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:31 IST" name="verifyUserisAbletoSearchNewUserinAdminUsers" finished-at="2025-09-01T20:02:36 IST" duration-ms="5699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserisAbletoSearchNewUserinAdminUsers -->
-        <test-method is-config="true" signature="closeandquit()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T18:24:45 IST" name="closeandquit" finished-at="2025-09-01T18:24:45 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeandquit()[pri:0, instance:test_Script.AdminUsers_Test@3eb738bb]" started-at="2025-09-01T20:02:36 IST" name="closeandquit" finished-at="2025-09-01T20:02:36 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeandquit -->

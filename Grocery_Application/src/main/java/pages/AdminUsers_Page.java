@@ -24,7 +24,7 @@ public class AdminUsers_Page {
 	
 	@FindBy(xpath="//a[@onclick='click_button(2)']") private WebElement searchButton;
 	@FindBy(id="un") private WebElement userNameButton;
-	@FindBy(id="ut") private WebElement searchuserTypeField;
+	@FindBy(xpath="//select[@id='ut']") private WebElement searchuserTypeField;
 	@FindBy(xpath="//button[@value='sr']") private WebElement searchUserbutton;
 	
 	
@@ -44,14 +44,11 @@ public class AdminUsers_Page {
 	{
 		passwordField.sendKeys("anakha@123");
 	}
-	public void enterUsertypefield()
-	{
-		userTypeField.click();
-	}
+	
 	public void selectAdminfromUserType()
 	{
 		Select select=new Select(userTypeField);
-		select.selectByValue("admin");
+		select.selectByIndex(2);
 	}
 	public void clickSaveButton()
 	{
@@ -66,14 +63,11 @@ public class AdminUsers_Page {
 	{
 		userNameButton.sendKeys("anakha");	
 	}
-	public void enterUsertypeinSearchPage()
-	{
-		searchuserTypeField.sendKeys("Admin");
-	}
+	
 	public void selectAdminfromUserTypeinSearchPage()
 	{
-		Select select=new Select(userTypeField);
-		select.selectByValue("Admin");
+		Select select=new Select(searchuserTypeField);
+		select.selectByIndex(2);
 	}
 	public void clickSearchButtondisplayedintheSearchPage()
 	{

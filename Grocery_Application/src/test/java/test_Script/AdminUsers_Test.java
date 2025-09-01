@@ -28,7 +28,7 @@ public class AdminUsers_Test extends Base_Class {
 		adminusersPage.clickNewButton();
 		adminusersPage.enterUsernameField();
 		adminusersPage.enterPasswordfield();
-		adminusersPage.enterUsertypefield();
+		
 		adminusersPage.selectAdminfromUserType();
 		adminusersPage.clickSaveButton();
 		}
@@ -47,9 +47,10 @@ public class AdminUsers_Test extends Base_Class {
 		adminusersPage.clickAdminUsersButton();
 		adminusersPage.clickSearchButton();
 		adminusersPage.enterUsernamefieldDisplayedintheSearchpage();
-		adminusersPage.enterUsertypeinSearchPage();
+		adminusersPage.selectAdminfromUserTypeinSearchPage();
+		
 		adminusersPage.clickSearchButtondisplayedintheSearchPage();
-		adminusersPage.clickSearchButton();
+		
 		
 		
 	}
