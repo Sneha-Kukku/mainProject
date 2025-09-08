@@ -27,6 +27,8 @@ public class AdminUsers_Test extends Base_Class {
 		AdminUsers_Page adminusersPage=new AdminUsers_Page(driver);
 		adminusersPage.clickAdminUsersButton();
 		adminusersPage.clickNewButton();
+		String adminusername=Excel_Utility.getStringData(1, 0,"AdminUsersPage");
+		String adminpassword=Excel_Utility.getStringData(1, 1,"AdminUsersPage");
 		RandomDataUtility random=new RandomDataUtility();
 		String adminUsername=random.createRandomUserName();
 		String adminPassword=random.createRandomPassword();
@@ -50,7 +52,9 @@ public class AdminUsers_Test extends Base_Class {
 		AdminUsers_Page adminusersPage=new AdminUsers_Page(driver);
 		adminusersPage.clickAdminUsersButton();
 		adminusersPage.clickSearchButton();
-		adminusersPage.enterUsernamefieldDisplayedintheSearchpage();
+		String adminusername=Excel_Utility.getStringData(1, 0,"AdminUsersPage");
+		String adminpassword=Excel_Utility.getStringData(1, 1,"AdminUsersPage");
+		adminusersPage.enterUsernamefieldDisplayedintheSearchpage(adminusername);
 		adminusersPage.selectAdminfromUserTypeinSearchPage();
 		
 		adminusersPage.clickSearchButtondisplayedintheSearchPage();

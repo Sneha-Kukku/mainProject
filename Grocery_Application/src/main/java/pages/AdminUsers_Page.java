@@ -59,9 +59,9 @@ public class AdminUsers_Page {
 		searchButton.click();
 	}
 	
-	public void enterUsernamefieldDisplayedintheSearchpage()
+	public void enterUsernamefieldDisplayedintheSearchpage(String name)
 	{
-		userNameButton.sendKeys("anakha");	
+		userNameButton.sendKeys(name);	
 	}
 	
 	public void selectAdminfromUserTypeinSearchPage()
