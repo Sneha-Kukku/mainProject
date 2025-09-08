@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test_Script.AdminUsers_Test">
+      <class name="test_Script.ManageNews_Test">
         <methods>
-          <include name="verifyUserisAbletoSearchNewUserinAdminUsers"/>
+          <include name="verifyUserisAbleToSearchAddedTitleonSearchbox"/>
           <include name="initializeBrowser"/>
-          <include name="closeandquit"/>
+          <include name="driverQuit"/>
         </methods>
-      </class> <!-- test_Script.AdminUsers_Test -->
+      </class> <!-- test_Script.ManageNews_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

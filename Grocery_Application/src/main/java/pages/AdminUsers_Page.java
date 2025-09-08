@@ -36,13 +36,13 @@ public class AdminUsers_Page {
 	{
 		newButton.click();
 	}
-	public void enterUsernameField()
+	public void enterUsernameField(String username)
 	{
-		usernamefield.sendKeys("anakha");
+		usernamefield.sendKeys(username);
 	}
-	public void enterPasswordfield()
+	public void enterPasswordfield(String password)
 	{
-		passwordField.sendKeys("anakha@123");
+		passwordField.sendKeys(password);
 	}
 	
 	public void selectAdminfromUserType()

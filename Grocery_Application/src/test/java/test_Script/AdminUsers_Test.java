@@ -10,10 +10,11 @@ import automation_Core.Base_Class;
 import pages.AdminUsers_Page;
 import pages.Login_Page;
 import utilities.Excel_Utility;
+import utilities.RandomDataUtility;
 
 public class AdminUsers_Test extends Base_Class {
 	@Test
-	public void verifyUserisAbletoClickOnMoreinfoinAdminusersofHomePage() throws IOException
+	public void verifyUserisAbleToAddNewUser() throws IOException
 	{
 		String username=Excel_Utility.getStringData(1, 0,"LoginPage");
 		String password=Excel_Utility.getStringData(1, 1,"LoginPage");
@@ -26,8 +27,11 @@ public class AdminUsers_Test extends Base_Class {
 		AdminUsers_Page adminusersPage=new AdminUsers_Page(driver);
 		adminusersPage.clickAdminUsersButton();
 		adminusersPage.clickNewButton();
-		adminusersPage.enterUsernameField();
-		adminusersPage.enterPasswordfield();
+		RandomDataUtility random=new RandomDataUtility();
+		String adminUsername=random.createRandomUserName();
+		String adminPassword=random.createRandomPassword();
+		adminusersPage.enterUsernameField(adminUsername);
+		adminusersPage.enterPasswordfield(adminPassword);
 		
 		adminusersPage.selectAdminfromUserType();
 		adminusersPage.clickSaveButton();

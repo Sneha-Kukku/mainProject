@@ -12,7 +12,7 @@ import utilities.Excel_Utility;
 //import pages.Login_Page;
 
 public class Login_Test extends Base_Class {
-	@Test
+	@Test(priority=1,description="sucessful user login with valid credentials")
 	public void verifyUserLoginWithValidCredentials() throws IOException
 	{
 		String username=Excel_Utility.getStringData(1, 0,"LoginPage");
@@ -25,7 +25,7 @@ public class Login_Test extends Base_Class {
 		
 		
 	}
-	@Test
+	@Test(priority=2,description="user login with invalid username and valid password")
 	public void verifyInvalidUsernamewithValidPassword() throws IOException
 	{
 		String username=Excel_Utility.getStringData(2, 0,"LoginPage");
@@ -36,7 +36,7 @@ public class Login_Test extends Base_Class {
 		loginpage.clickSigninButton();
 		
 	}
-	@Test
+	@Test(priority=3,description="user login with valid username and invalid password")
 	public void verifyvalidUsernamewithInValidPassword() throws IOException
 	{
 		String username=Excel_Utility.getStringData(3, 0,"LoginPage");
@@ -47,7 +47,7 @@ public class Login_Test extends Base_Class {
 		loginpage.clickSigninButton();
 		
 }
-	@Test
+	@Test(priority=4,description="user login with invalid username and invalid password")
 	public void verifyInvalidUsernamewithInValidPassword() throws IOException
 	{
 		String username=Excel_Utility.getStringData(4, 0,"LoginPage");
