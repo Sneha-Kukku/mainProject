@@ -3,6 +3,7 @@ package test_Script;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation_Core.Base_Class;
@@ -32,6 +33,12 @@ public class ManageNews_Test extends Base_Class {
 		//managenews.enterDetailsonTextNewsBox(newsDetails);
 		//managenews.clickSaveButton();
 		
+		String expected="Manage News";
+		String actual=loginpage.getTitleText();
+		Assert.assertEquals(actual,expected,"user is able to add new title");
+		
+		
+		
 		
 	}
 	@Test
@@ -54,6 +61,10 @@ public class ManageNews_Test extends Base_Class {
 		//managenews.enterTitleNewsonSearchPage(newsDetails);
 		//managenews.clickSearchTitleButton();
 		//managenews.clickResetButton();
+		
+		String expected="Manage News";
+		String actual=loginpage.getTitleText();
+		Assert.assertEquals(actual,expected,"user is able to add Title on search box");
 	}
 	
 

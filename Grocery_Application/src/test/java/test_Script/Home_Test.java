@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation_Core.Base_Class;
@@ -30,8 +31,9 @@ public class Home_Test extends Base_Class {
 		homepage.clickAdminButton();
 		homepage.clickLogoutButton();
 		
-		
-		
+		String expected="Logout";
+		String actual=loginpage.getTitleText();
+		Assert.assertEquals(actual,expected,"user is able to logout");
 	
 	}
 

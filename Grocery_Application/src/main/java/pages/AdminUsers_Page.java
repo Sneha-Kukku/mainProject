@@ -27,6 +27,8 @@ public class AdminUsers_Page {
 	@FindBy(xpath="//select[@id='ut']") private WebElement searchuserTypeField;
 	@FindBy(xpath="//button[@value='sr']") private WebElement searchUserbutton;
 	
+	@FindBy(xpath="//h1[@class='m-0 text-dark']") private WebElement adminUsersTitle;
+	@FindBy(xpath="//h3[@class='card-title']") private WebElement adminUsersInformationsTitle;
 	
 	public void clickAdminUsersButton()
 	{
@@ -73,5 +75,14 @@ public class AdminUsers_Page {
 	{
 		searchUserbutton.click();
 	}
+	public String getTitleText()
+	{
+		return adminUsersTitle.getText();
+	}
+	public String getTitleTextofAdminUsersInformation()
+	{
+		return adminUsersInformationsTitle.getText();
+	}
+	
 	
 }

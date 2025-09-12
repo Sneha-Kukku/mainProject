@@ -8,11 +8,182 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,105</td><td></td><td></td></tr>
+<tr><th colspan="8">parallel</th></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">45,235</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">1</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">114,841</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">5</th><th class="num attn">3</th><th class="num">0</th><th class="num">0</th><th class="num">160,076</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test_Script.AdminUsers_Test</td><td><a href="#m0">verifyUserisAbletoSearchNewUserinAdminUsers</a></td><td rowspan="1">1757340231934</td><td rowspan="1">4593</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">parallel</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">test_Script.Login_Test</td><td><a href="#m0">verifyInvalidUsernamewithInValidPassword</a></td><td rowspan="1">1757638467622</td><td rowspan="1">1261</td></tr><tr class="passedeven"><td><a href="#m1">verifyInvalidUsernamewithValidPassword</a></td><td rowspan="1">1757638443781</td><td rowspan="1">1623</td></tr><tr class="passedeven"><td><a href="#m2">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1757638432227</td><td rowspan="1">3724</td></tr><tr class="passedeven"><td><a href="#m3">verifyvalidUsernamewithInValidPassword</a></td><td rowspan="1">1757638455113</td><td rowspan="1">1581</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="3">test_Script.Login_Test</td><td><a href="#m4">initializeBrowser</a></td><td rowspan="3">1757638541271</td><td rowspan="3">42757</td></tr><tr class="failedeven"><td><a href="#m5">initializeBrowser</a></td></tr><tr class="failedeven"><td><a href="#m6">initializeBrowser</a></td></tr><tr><th colspan="4">Test2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">test_Script.Login_Test</td><td><a href="#m7">verifyInvalidUsernamewithInValidPassword</a></td><td rowspan="1">1757638584032</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m8">verifyInvalidUsernamewithValidPassword</a></td><td rowspan="1">1757638535561</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">verifyvalidUsernamewithInValidPassword</a></td><td rowspan="1">1757638541243</td><td rowspan="1">2</td></tr><tr><th colspan="4">Test2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m10">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1757638522427</td><td rowspan="1">3132</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">test_Script.AdminUsers_Test#verifyUserisAbletoSearchNewUserinAdminUsers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test1</h2><h3 id="m0">test_Script.Login_Test#verifyInvalidUsernamewithInValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">test_Script.Login_Test#verifyInvalidUsernamewithValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">test_Script.Login_Test#verifyvalidUsernamewithInValidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test2</h2><h3 id="m4">test_Script.Login_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at io.github.bonigarcia.wdm.online.Downloader.deleteFile(Downloader.java:332)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:149)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:92)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1303)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at io.github.bonigarcia.wdm.online.Downloader.deleteFile(Downloader.java:330)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">test_Script.Login_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">test_Script.Login_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">test_Script.Login_Test#verifyInvalidUsernamewithInValidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at io.github.bonigarcia.wdm.online.Downloader.deleteFile(Downloader.java:332)
+	at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:149)
+	at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:92)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1303)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.nio.file.AccessDeniedException: C:\Users\user\.cache\selenium\msedgedriver\win64\140.0.3485.54\msedgedriver.exe
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at io.github.bonigarcia.wdm.online.Downloader.deleteFile(Downloader.java:330)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">test_Script.Login_Test#verifyInvalidUsernamewithValidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">test_Script.Login_Test#verifyvalidUsernamewithInValidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 29 more
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -16,6 +16,7 @@ public class Home_Page {
 	
 	@FindBy(xpath="//a[@data-toggle='dropdown']") private WebElement adminButton;
 	@FindBy(xpath="//a[@class='dropdown-item' and @href='https://groceryapp.uniqassosiates.com/admin/logout']") private WebElement logoutButton;
+	@FindBy(xpath = "//button[text()='Sign In']") private WebElement loginButton;
 	
 	
 	
@@ -26,6 +27,10 @@ public class Home_Page {
 	public void clickLogoutButton()
 	{
 		logoutButton.click();
+	}
+	public boolean userLoggedOut()
+	{
+		return loginButton.isDisplayed();
 	}
 
 }

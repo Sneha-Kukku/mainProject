@@ -27,6 +27,8 @@ public class ManageNews_Page {
 	@FindBy(xpath = "//button[@class='btn btn-danger btn-fix']") private WebElement titleButtonSearch;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']") private WebElement resetButton;
 	
+	@FindBy(xpath="//h1[@class='m-0 text-dark']") private WebElement manageNewsTitle;
+	
 	
 	public void clickManageNewsPage()
 	{
@@ -74,6 +76,10 @@ public class ManageNews_Page {
 	public void clickResetButton()
 	{
 		resetButton.click();
+	}
+	public String getTitleText()
+	{
+		return manageNewsTitle.getText();
 	}
 
 }

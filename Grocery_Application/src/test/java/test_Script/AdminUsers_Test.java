@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation_Core.Base_Class;
@@ -37,6 +38,10 @@ public class AdminUsers_Test extends Base_Class {
 		
 		adminusersPage.selectAdminfromUserType();
 		adminusersPage.clickSaveButton();
+		
+		String expected="Admin Users";
+		String actual=loginpage.getTitleText();
+		Assert.assertEquals(actual,expected,"user is able to add new user");
 		}
 	@Test
 	public void verifyUserisAbletoSearchNewUserinAdminUsers() throws IOException
@@ -58,6 +63,10 @@ public class AdminUsers_Test extends Base_Class {
 		adminusersPage.selectAdminfromUserTypeinSearchPage();
 		
 		adminusersPage.clickSearchButtondisplayedintheSearchPage();
+		
+		String expected="Admin Users";
+		String actual=loginpage.getTitleText();
+		Assert.assertEquals(actual,expected,"user is able to search new user in AdminUsers");
 		
 		
 		
