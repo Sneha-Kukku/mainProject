@@ -13,5 +13,11 @@ public class Constant {
 	
 	public static final String NEWTITLENEWSCREATIONERROR="user is able to add new title";
 	public static final String TOSEARCHADDEDTITLEONSEARCHBOXERROR="user is able to add Title on search box";
+	
+	public static final String EXCELPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\TestDataMainProject.xlsx";
+	
+	public static final String CONFIGFILES=System.getProperty("user.dir")+"\\src\\main\\resources\\ConfigProperties";
 
+			
+			
 }
