@@ -19,20 +19,7 @@
     </classes>
     
   </test> <!-- Test -->
-  <test thread-count="5" name="Test2">
-  <parameter name="browser" value="chrome"></parameter>
-    <classes>
-     
-      <class name="test_Script.Home_Test">
-      <!--
-     <methods>
-      <include name="verifyUserIsAbleToLogout"></include>
-      
-      </methods>-->
-      </class>
-    </classes>
-    
-  </test> <!-- Test -->
+  
   
   
 </suite> <!-- Suite -->

@@ -21,19 +21,22 @@ public class Login_Page {
 	@FindBy(xpath = "//b[text()='7rmart supermarket']") private WebElement loginTitle;
 	
 	
-	public void enterUsernameonUserField(String username)
+	public Login_Page enterUsernameonUserField(String username)
 	{
 		
 		usernamefield.sendKeys(username);
+		return this;
 	}
-	public void enterPasswordonPasswordField(String password)
+	public Login_Page enterPasswordonPasswordField(String password)
 	{
 		passwordfield.sendKeys(password);
+		return this;
 
 }
-	public void clickSigninButton()
+	public Home_Page clickSigninButton()
 	{
 		signin.click();
+		return new Home_Page(driver);
 	}
 	public boolean isDashboardDisplayed()
 	{

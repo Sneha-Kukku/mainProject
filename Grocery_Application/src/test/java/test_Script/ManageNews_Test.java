@@ -7,12 +7,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation_Core.Base_Class;
+import pages.AdminUsers_Page;
+import pages.Home_Page;
 import pages.Login_Page;
 import pages.ManageNews_Page;
 import utilities.ExcelUtility;
 import utilities.Excel_Utility;
 
 public class ManageNews_Test extends Base_Class {
+	public Home_Page homepage;
+	public AdminUsers_Page adminUsers_Page;
 	@Test
 	public void verifyUserisAbleToAddNewTitle() throws IOException
 	{
@@ -21,14 +25,12 @@ public class ManageNews_Test extends Base_Class {
 		
 		
 		Login_Page loginpage=new Login_Page(driver);
-		loginpage.enterUsernameonUserField(username);
-		loginpage.enterPasswordonPasswordField(password);
-		loginpage.clickSigninButton();
+		loginpage.enterUsernameonUserField(username).enterPasswordonPasswordField(password);
+		homepage=loginpage.clickSigninButton();
 		
 		ManageNews_Page managenews=new ManageNews_Page(driver);
-		managenews.clickManageNewsPage();
-		managenews.clickNewButton();
-		managenews.newsReadbyExcel();
+		
+		managenews.clickNewButton().newsReadbyExcel();
 		//String newsDetails=Excel_Utility.getStringData(1, 0, "ManageNews");
 		//managenews.enterDetailsonTextNewsBox(newsDetails);
 		//managenews.clickSaveButton();
@@ -49,14 +51,12 @@ public class ManageNews_Test extends Base_Class {
 		
 		
 		Login_Page loginpage=new Login_Page(driver);
-		loginpage.enterUsernameonUserField(username);
-		loginpage.enterPasswordonPasswordField(password);
-		loginpage.clickSigninButton();
+		loginpage.enterUsernameonUserField(username).enterPasswordonPasswordField(password);
+		homepage=loginpage.clickSigninButton();
 		
 		ManageNews_Page managenews=new ManageNews_Page(driver);
-		managenews.clickManageNewsPage();
-		managenews.clickSearchButton();
-		managenews.searchTitleNewsbyExcelsheet();
+		
+		managenews.clickSearchButton().searchTitleNewsbyExcelsheet();
 		//String newsDetails=ExcelUtility.getStringData(1, 0, "ManageNews");
 		//managenews.enterTitleNewsonSearchPage(newsDetails);
 		//managenews.clickSearchTitleButton();
@@ -64,7 +64,7 @@ public class ManageNews_Test extends Base_Class {
 		
 		String expected="Manage News";
 		String actual=loginpage.getTitleText();
-		Assert.assertEquals(actual,expected,"user is able to add Title on search box");
+		Assert.assertEquals(actual,expected,"user is not able to add Title on search box");
 	}
 	
 

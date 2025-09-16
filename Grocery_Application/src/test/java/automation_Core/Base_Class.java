@@ -20,16 +20,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.ScreenshotUtility;
 
 public class Base_Class {
-	Properties prop;
+	public Properties prop;
 	public WebDriver driver;
 	FileInputStream fs;
 	@BeforeMethod(alwaysRun=true)
 	@Parameters("browser")
 	public void initializeBrowser(String browser) throws Exception
 	{
+		
+			
+		
 		prop=new Properties();
-		prop.load(fs);
+		
 		fs=new FileInputStream(Constant.CONFIGFILES);
+		prop.load(fs);
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();

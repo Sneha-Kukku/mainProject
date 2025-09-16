@@ -16,16 +16,4 @@
       </class> <!-- test_Script.Login_Test -->
     </classes>
   </test> <!-- Test1(failed) -->
-  <test thread-count="5" name="Test2(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="test_Script.Home_Test">
-        <methods>
-          <include name="verifyUserIsAbleToLogout"/>
-          <include name="initializeBrowser"/>
-          <include name="driverQuit"/>
-        </methods>
-      </class> <!-- test_Script.Home_Test -->
-    </classes>
-  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

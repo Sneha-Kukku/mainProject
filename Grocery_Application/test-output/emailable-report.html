@@ -8,37 +8,61 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">138</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">46</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num attn">2</th><th class="num">0</th><th class="num">0</th><th class="num">184</th><th colspan="2"></th></tr>
+<tr><th colspan="8">crossbrowser testing</th></tr>
+<tr><td><a href="#t0">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,839</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">EdgeTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">48,650</td><td></td><td></td></tr>
+<tr><td><a href="#t2">FireFoxTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">22,008</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num attn">1</th><th class="num">0</th><th class="num">0</th><th class="num">88,497</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m0">initializeBrowser</a></td><td rowspan="1">1757913913281</td><td rowspan="1">19</td></tr><tr><th colspan="4">Test1 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m1">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1757913913312</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Test2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">test_Script.Home_Test</td><td><a href="#m2">initializeBrowser</a></td><td rowspan="1">1757913914023</td><td rowspan="1">1</td></tr><tr><th colspan="4">Test2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">test_Script.Home_Test</td><td><a href="#m3">verifyUserIsAbleToLogout</a></td><td rowspan="1">1757913914027</td><td rowspan="1">4</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">crossbrowser testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m0">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1758015933525</td><td rowspan="1">5574</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">EdgeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m1">initializeBrowser</a></td><td rowspan="1">1758015939592</td><td rowspan="1">48488</td></tr><tr><th colspan="4">EdgeTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m2">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1758015988127</td><td rowspan="1">2</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">FireFoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">test_Script.Login_Test</td><td><a href="#m3">verifyUserLoginWithValidCredentials</a></td><td rowspan="1">1758016006824</td><td rowspan="1">3514</td></tr></tbody>
 </table>
-<h2>Test1</h2><h3 id="m0">test_Script.Login_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: inStream parameter is null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at java.base/java.util.Properties.load(Properties.java:409)
-	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:31)
+<h2>ChromeTest</h2><h3 id="m0">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>EdgeTest</h2><h3 id="m1">test_Script.Login_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:46)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 35 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 39 more
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: inStream parameter is null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at java.base/java.util.Properties.load(Properties.java:409)
-	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:31)
+<h3 id="m2">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:46)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.lang.IllegalArgumentException: URI is not absolute
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 35 more
+Caused by: java.lang.IllegalArgumentException: URI is not absolute
+	at java.base/java.net.URL.of(URL.java:862)
+	at java.base/java.net.URI.toURL(URI.java:1172)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:300)
+	... 39 more
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test2</h2><h3 id="m2">test_Script.Home_Test#initializeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: inStream parameter is null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at java.base/java.util.Properties.load(Properties.java:409)
-	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">test_Script.Home_Test#verifyUserIsAbleToLogout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: inStream parameter is null
-	at java.base/java.util.Objects.requireNonNull(Objects.java:246)
-	at java.base/java.util.Properties.load(Properties.java:409)
-	at automation_Core.Base_Class.initializeBrowser(Base_Class.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>FireFoxTest</h2><h3 id="m3">test_Script.Login_Test#verifyUserLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

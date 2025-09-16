@@ -16,7 +16,7 @@ public class ManageNews_Page {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	@FindBy(xpath = "//a[@class='small-box-footer' and @href='https://groceryapp.uniqassosiates.com/admin/list-news']") private WebElement manageNewsPage;
+	
 	@FindBy(xpath ="//a[@class='btn btn-rounded btn-danger']") private WebElement newButton;
 	@FindBy(xpath="//textarea[@id='news']") private WebElement textNewsBox;
 	@FindBy(xpath = "//button[@name='create']") private WebElement saveButton;
@@ -30,52 +30,57 @@ public class ManageNews_Page {
 	@FindBy(xpath="//h1[@class='m-0 text-dark']") private WebElement manageNewsTitle;
 	
 	
-	public void clickManageNewsPage()
-	{
-		manageNewsPage.click();
-	}
 	
-	public void clickNewButton()
+	
+	public ManageNews_Page clickNewButton()
 	{
 		newButton.click();
+		return this;
 	}
-	public void newsReadbyExcel() throws IOException
+	public ManageNews_Page newsReadbyExcel() throws IOException
 	{
 		String news=Excel_Utility.getStringData(1, 0,"ManageNews");
 		
 		textNewsBox.sendKeys(news);
 		saveButton.click();
+		return this;
 		
 	}
-	public void enterDetailsonTextNewsBox(String newsDetails)
+	public ManageNews_Page enterDetailsonTextNewsBox(String newsDetails)
 	{
 		textNewsBox.sendKeys(newsDetails);
+		return this;
 	}
-	public void clickSaveButton()
+	public ManageNews_Page clickSaveButton()
 	{
 		
 		saveButton.click();
+		return this;
 	}
 	
 	
-	public void clickSearchButton()
+	public ManageNews_Page clickSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
-	public void searchTitleNewsbyExcelsheet() throws IOException
+	public ManageNews_Page searchTitleNewsbyExcelsheet() throws IOException
 	{
 		String news12=Excel_Utility.getStringData(1, 0,"ManageNews");
 		searchTitleButton.sendKeys(news12);
 		titleButtonSearch.click();
+		return this;
 		
 	}
-	public void clickSearchTitleButton()
+	public ManageNews_Page clickSearchTitleButton()
 	{
 		titleButtonSearch.click();
+		return this;
 	}
-	public void clickResetButton()
+	public ManageNews_Page clickResetButton()
 	{
 		resetButton.click();
+		return this;
 	}
 	public String getTitleText()
 	{

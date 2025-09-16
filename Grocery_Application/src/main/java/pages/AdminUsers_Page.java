@@ -1,10 +1,16 @@
 package pages;
 
+import java.lang.invoke.ConstantBootstraps;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import constants.Constant;
+import utilities.Page_Utility;
+import utilities.Wait_Utility;
 
 public class AdminUsers_Page {
 	public WebDriver driver;
@@ -15,7 +21,7 @@ public class AdminUsers_Page {
 	}
 	
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']") private WebElement moreInfoButton;
+	
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']") private WebElement newButton;
 	@FindBy(id="username")private WebElement usernamefield;
 	@FindBy(id="password") private WebElement passwordField;
@@ -30,50 +36,59 @@ public class AdminUsers_Page {
 	@FindBy(xpath="//h1[@class='m-0 text-dark']") private WebElement adminUsersTitle;
 	@FindBy(xpath="//h3[@class='card-title']") private WebElement adminUsersInformationsTitle;
 	
-	public void clickAdminUsersButton()
-	{
-		moreInfoButton.click();	
-	}
-	public void clickNewButton()
+	
+	public AdminUsers_Page clickNewButton()
 	{
 		newButton.click();
+		return this;
 	}
-	public void enterUsernameField(String username)
+	public AdminUsers_Page enterUsernameField(String username)
 	{
 		usernamefield.sendKeys(username);
+		return this;
 	}
-	public void enterPasswordfield(String password)
+	public AdminUsers_Page enterPasswordfield(String password)
 	{
 		passwordField.sendKeys(password);
+		return this;
 	}
 	
-	public void selectAdminfromUserType()
+	public AdminUsers_Page selectAdminfromUserType()
 	{
-		Select select=new Select(userTypeField);
-		select.selectByIndex(2);
+		Page_Utility page=new Page_Utility();
+		page.selectDropdownWithValue(userTypeField,Constant.USERTYPEVALUE);
+		return this;
+		
 	}
-	public void clickSaveButton()
+	public AdminUsers_Page clickSaveButton()
 	{
-		saveButton.click();
+		Wait_Utility wait=new Wait_Utility();
+		wait.waitUntilElementToBeClickable(driver, saveButton);
+		return this;
+		//saveButton.click();
 	}
-	public void clickSearchButton()
+	public AdminUsers_Page clickSearchButton()
 	{
 		searchButton.click();
+		return this;
 	}
 	
-	public void enterUsernamefieldDisplayedintheSearchpage(String name)
+	public AdminUsers_Page enterUsernamefieldDisplayedintheSearchpage(String name)
 	{
 		userNameButton.sendKeys(name);	
+		return this;
 	}
 	
-	public void selectAdminfromUserTypeinSearchPage()
+	public AdminUsers_Page selectAdminfromUserTypeinSearchPage()
 	{
 		Select select=new Select(searchuserTypeField);
 		select.selectByIndex(2);
+		return this;
 	}
-	public void clickSearchButtondisplayedintheSearchPage()
+	public AdminUsers_Page clickSearchButtondisplayedintheSearchPage()
 	{
 		searchUserbutton.click();
+		return this;
 	}
 	public String getTitleText()
 	{

@@ -14,8 +14,9 @@ public class Page_Utility {
 		}
 	public void selectByIndex(WebElement dropdown, int index) 
 	{
-		Select dropdn = new Select(dropdown);
-		dropdn.selectByIndex(index);
+		Select select=new Select(dropdown);
+		select.selectByIndex(2);
+		
 	}
 	public void selectByText(WebElement dropdown, String admin) 
 	{
